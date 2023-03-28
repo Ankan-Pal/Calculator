@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function add() {
+    var n1 = parseInt(document.getElementById("n1").value);
+    var n2 = parseInt(document.getElementById("n2").value);
+    var sum = n1 + n2;
+    document.getElementById("result").innerHTML = sum;
+}
+function getValue() {
+    let text = document.getElementById("n1");
+    let textValue = text.value;
+    let a = textValue * textValue
+    result.innerText = a
+}
+function getValue2() {
+    let text = document.getElementById("n1");
+    let textValue = text.value;
+    let txt = document.getElementById("n2");
+    let txtValue = txt.value;
+    let a = textValue * textValue;
+    answer = textValue - txtValue;
+    result.innerText = answer
+}
+function getValue3() {
+    let text = document.getElementById("n1");
+    let textValue = text.value;
+    let txt = document.getElementById("n2");
+    let txtValue = txt.value;
+    let a = textValue * textValue;
+    answer = textValue * txtValue;
+    result.innerText = answer
+}
+function getValue4() {
+    let text = document.getElementById("n1");
+    let textValue = text.value;
+    let txt = document.getElementById("n2");
+    let txtValue = txt.value;
+    answer = textValue / txtValue;
+    result.innerText = answer
+}
+function getValue5() {
+    let text = document.getElementById("n1");
+    let textValue = text.value;
+    let root = Math.sqrt(textValue)
+    //  answer = textValue * txtValue;
+    result.innerText = root
+}
+    </script>
+    <style>
+        #txt1 {
+    position: relative;
+    text-align: center;
+}
+
+#box1 {
+    position: relative;
+    left: 500px;
+}
+
+#operation1 {
+    top: 40px;
+    position: relative;
+    left: 600px;
+}
+
+.bisect {
+    text-align: center;
+}
+
+.re {
+    position: relative;
+    left: 550px;
+    background-color: black;
+    color: greenyellow;
+    height: 40px;
+    width: 200px;
+    top: 100px;
+    text-align: center;
+    border-style: double;
+    border-radius: 2px;
+}
+
+#n1 {
+    color: greenyellow;
+    background-color: black;
+}
+
+#n2 {
+    color: greenyellow;
+    background-color: black;
+}
+    </style>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="body">
+        <div id="txt1">
+            <h1>Enter number</h1>
+        </div>
+        <div id="box1">
+            <input type="text" id="n1" placeholder="Type number 1 " title="Type numbers for everything">
+            <input type="text" id="n2" placeholder="type number 2 " title="Type numbers only for '+' '-' '*' '/'">
+        </div>
+        <div class="bisect">
+            <h1>Choose Operation</h1>
+        </div>
+        <div id="operation1">
+            <input type="button" onclick="getValue()" id="square" value="x²"title="square it will give the square of  only first number">
+            <input type="button" onclick="add()" value="+" id="add" title="Addition">
+            <input type="button" onclick="getValue2()" value="-" id="sub" title="Subtraction">
+            <input type="button" onclick="getValue3()" value="*" id="mul" title="Multiplication">
+            <input type="button" onclick="getValue4()" value="/" id="divide" title="Devision">
+            <input type="button" onclick="getValue5()" value="2√x" id="root" title="Square Root it will give the square of  only first number">
+        </div>
+        <div class="re" title="See the result">
+            <span id="result"></span>
+        </div>
+    </div>
+</body>
+
+</html>
